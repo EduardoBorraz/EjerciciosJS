@@ -8,6 +8,8 @@ const esPalindromo = (word) => {
 
   if (word === "")
     return (mensaje.innerHTML = `<li style = "color: #f4b700;">Upps!!No ha ingresado la frase</li>`);
+  if (!isNaN(word))
+    return (mensaje.innerHTML = `<li style = "color: #f4b700;">Upps!!No ingrese numeros</li>`);
 
   word = word.toLowerCase();
   let alReves = word.split("").reverse().join("");
@@ -123,31 +125,33 @@ const aplicarDescuento = (precio, descuento) => {
     return (mensajeDescuento.innerHTML = `<li style = "color: red;">!!No es posible calcular números negativos</li>`);
   if (descuento === 0)
     return (mensajeDescuento.innerHTML = `<li style = "color: red;">!!El descuento no puede ser del 0% </li>`);
-  
-  descuento = descuento / 100; 
-  precio = precio - precio * descuento; 
 
-  return mensajeDescuento.innerHTML = `<li style = "color: #32a3b1">El precio total con descuento es de: $ ${precio} </li>`
+  descuento = descuento / 100;
+  precio = precio - precio * descuento;
+
+  return (mensajeDescuento.innerHTML = `<li style = "color: #32a3b1">El precio total con descuento es de: $ ${precio} </li>`);
 };
 
-formularioDescuento.addEventListener('submit', (e) =>{
+formularioDescuento.addEventListener("submit", (e) => {
   e.preventDefault();
-  let precio = document.querySelector('#precio').value;
-  let descuento = document.querySelector('#descuento').value;
+  let precio = document.querySelector("#precio").value;
+  let descuento = document.querySelector("#descuento").value;
   //console.log(precio);
   //console.log(descuento);
-  aplicarDescuento(precio,descuento);
+  aplicarDescuento(precio, descuento);
   formularioDescuento.reset();
-})
+});
 
 //8) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
 
-let formularioVocal = document.querySelector('#formularioVocal');
-let mensajeVocal = document.querySelector('#mensajeVocal');
+let formularioVocal = document.querySelector("#formularioVocal");
+let mensajeVocal = document.querySelector("#mensajeVocal");
 
-const vocalConsonante = frase =>{
+const vocalConsonante = (frase) => {
   if (frase === "")
-    return mensajeVocal.innerHTML = `<li style = "color: #f4b700;">Upps!!No ha ingresado la frase</li>`
+    return (mensajeVocal.innerHTML = `<li style = "color: #f4b700;">Upps!!No ha ingresado la frase</li>`);
+    if (!isNaN(frase))
+    return (mensajeVocal.innerHTML = `<li style = "color: #f4b700;">Upps!!No ingrese numeros</li>`);
 
   let vocales = 0;
   let consonantes = 0;
@@ -159,18 +163,17 @@ const vocalConsonante = frase =>{
     if (/[bcdfghjklmnñpqrstvwxyz]/.test(letra)) consonantes++;
   }
 
-  return mensajeVocal.innerHTML = `<li style = "color: #32a3b1">Total de Vocales: ${vocales}</li>
+  return (mensajeVocal.innerHTML = `<li style = "color: #32a3b1">Total de Vocales: ${vocales}</li>
   <li style = "color: #32a3b1">Total de consonantes: ${consonantes}</li>
-  `
+  `);
+};
 
-}
-
-formularioVocal.addEventListener('submit', (e) =>{
+formularioVocal.addEventListener("submit", (e) => {
   e.preventDefault();
-  let vocales = document.querySelector('#vocales').value;
+  let vocales = document.querySelector("#vocales").value;
   //console.log(vocales);
   vocalConsonante(vocales);
   formularioVocal.reset();
-})
+});
 
 //9) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
