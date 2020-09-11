@@ -1,2 +1,2 @@
 # EjerciciosJS
- Aplicando conceptos bases de JavaScript
+ Aplicando conceptos bases de JavaScript ES6.
