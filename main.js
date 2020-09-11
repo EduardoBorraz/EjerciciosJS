@@ -86,9 +86,10 @@ let formularioConvertidor = document.querySelector("#formularioConvertidor");
 let mensajeConvertidor = document.querySelector("#mensajeConvertidor");
 
 const gradoConvertidor = (grados, unidad) => {
+  if (unidad === "unidad")
+    return (mensajeConvertidor.innerHTML = `<li style = "color: #f4b700;">Upps!!No ha seleccionado la unidad</li>`);
   if (grados === "")
     return (mensajeConvertidor.innerHTML = `<li style = "color: #f4b700;">Upps!!No ha ingresado el grado a convertir</li>`);
-
   if (unidad === "C")
     return (mensajeConvertidor.innerHTML = `<li style = "color: #32a3b1">La conversión de: "${grados} ºC" == ${Math.round(
       grados * 1.8 + 32
@@ -104,9 +105,6 @@ formularioConvertidor.addEventListener("submit", (e) => {
   let convertidor = document.querySelector("#convertidor").value;
   let comboGrado = document.querySelector("#selectGrados");
   let selectedGrado = comboGrado.options[comboGrado.selectedIndex].value;
-
-  console.log(convertidor);
-  console.log(selectedGrado);
   gradoConvertidor(convertidor, selectedGrado);
   formularioConvertidor.reset();
 });
@@ -150,7 +148,7 @@ let mensajeVocal = document.querySelector("#mensajeVocal");
 const vocalConsonante = (frase) => {
   if (frase === "")
     return (mensajeVocal.innerHTML = `<li style = "color: #f4b700;">Upps!!No ha ingresado la frase</li>`);
-    if (!isNaN(frase))
+  if (!isNaN(frase))
     return (mensajeVocal.innerHTML = `<li style = "color: #f4b700;">Upps!!No ingrese numeros</li>`);
 
   let vocales = 0;
