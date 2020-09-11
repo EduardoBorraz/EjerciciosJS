@@ -2,11 +2,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
     <title>JavaScript</title>
   </head>
   <body>
-    <div class="text-center mt-5">
-      <h1>Bienvenido</h1>
+    <div class="container">
+      <div class="card">
+        <div class="imgBx">
+          <img src="img/fuente.png" alt="fuente" />
+        </div>
+        <div class="contentBx">
+          <h2>PALINDROMO</h2>
+          <p>
+            Ingresa una palabra o frase, para validar si es un palíndromo o no.
+          </p>
+        </div>
+        <form id="formulario">
+          <input id="palindromo" placeholder="Escribe tu frase.." type="text" />
+          <!-- <a href="#"><span>Verificar</span></a> -->
+          <button type="submit"><span>Verificar</span></button>
+        </form>
+        <div class="mensajes" id="mensajeActividades"></div>
+      </div>
+
+      <div class="card">
+        <div class="imgBx">
+          <img src="img/dos.png" alt="dos" />
+          <img src="img/uno.png" alt="uno" />
+          <img src="img/dos.png" alt="dos" />
+        </div>
+        <div class="contentBx">
+          <h2>CAPICÚA</h2>
+          <p>Ingresa un número para evaluar si el número es capicúa o no.</p>
+        </div>
+        <form id="form">
+          <input id="capicua" placeholder="Escribe el número.." type="number" />
+          <button type="submit"><span>Verificar</span></button>
+        </form>
+
+        <div class="Capicua" id="mensajeCapicua"></div>
+      </div>
+
+      <div class="card">
+        <div class="imgBx">
+          <img src="img/alerta.png" alt="factorial" />
+        </div>
+        <div class="contentBx">
+          <h2>FACTORIAL</h2>
+          <p>Ingresa un número para calcular el factorial.</p>
+        </div>
+        <form id="fomularioFactorial">
+          <input
+            id="factorial"
+            placeholder="Escribe el número.."
+            type="number"
+          />
+          <button type="submit"><span>Verificar</span></button>
+        </form>
+        <div class="factorial" id="mensajeFactorial"></div>
+      </div>
+
+      <div class="card">
+        <div class="imgBx">
+          <img src="img/temperatura.png" alt="factorial" />
+        </div>
+        <div class="contentBx">
+          <h2>Convertidor de grados</h2>
+          <p>Ingresa un número para convertir grados Celsius a Fahrenheit y viceversa.</p>
+        </div>
+        <form id="formularioConvertidor">
+          <select name="select" id="selectGrados">
+            <option>Unidad</option>
+            <option value="C">Celsius</option>
+            <option value="F">Farenhit</option>
+          </select>
+          <input
+            id="convertidor"
+            placeholder="Escribe el número.."
+            type="number"
+          />
+          <button type="submit"><span>Verificar</span></button>
+        </form>
+        <div class="convertidor" id="mensajeConvertidor"></div>
+      </div>
+
+      <div class="card">
+        <div class="imgBx">
+          <img src="img/dinero.png" alt="dinero" />
+        </div>
+        <div class="contentBx">
+          <h2>Calcular Descuento</h2>
+          <p>Ingresa el precio para calcular tu descuento.</p>
+        </div>
+        <form id="formularioDescuento">
+          <input
+            id="precio"
+            placeholder="Escribe el precio.."
+            type="number"
+          />
+          <input
+            id="descuento"
+            placeholder="Escribe el descuento.."
+            type="number"
+          /></input>
+          <button type="submit"><span>Verificar</span></button>
+        </form>
+        <div class="descuento" id="mensajeDescuento"></div>
+      </div>
+
+      <div class="card">
+        <div class="imgBx">
+          <img src="img/guarderia.png" alt="Vocal" />
+        </div>
+        <div class="contentBx">
+          <h2>Consonantes - Vocales</h2>
+          <p>Ingresa una frase para determinar cuantas vocales y consonantes tiene.</p>
+        </div>
+        <form id="formularioVocal">
+          
+          <input
+            id="vocales"
+            placeholder="Escribe la frase.."
+            type="text"
+          />
+          <button type="submit"><span>Verificar</span></button>
+        </form>
+        <div class="vocal" id="mensajeVocal"></div>
+      </div>
+
+      <!-- <div class="card">
+        <div class="imgBx">
+          <img src="img/temperatura.png" alt="fecha" />
+        </div>
+        <div class="contentBx">
+          <h2>Calendario</h2>
+          <p>Ingresa una fecha válida para determinar cuantos años han pasado hasta el día de hoy.</p>
+        </div>
+        <form id="fomularioFecha">
+          <input
+            id="fecha"
+            placeholder="Escribe el número.."
+            type="date"
+          />
+          <button type="submit"><span>Verificar</span></button>
+        </form>
+        <div class="fecha" id="mensajeFecha"></div>
+      </div> -->
     </div>
+
+    
+
+    <script src="main.js"></script>
   </body>
+
+  <!-- <footer>
+    Iconos diseñados por <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
+  </footer> -->
 </html>
