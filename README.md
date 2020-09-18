@@ -1,4 +1,4 @@
 # EjerciciosJS
- Aplicando conceptos bases de JavaScript ES6.
+# Aplicando conceptos bases de JavaScript ES6.
  
-App: https://ebjavascript.netlify.app/
+###[Live Site](https://ebjavascript.netlify.app/)
